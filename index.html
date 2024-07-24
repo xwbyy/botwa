@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Chat Simulation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div style="display: flex; align-items: center;">
+                <img src="https://telegra.ph/file/377de588cf42a009899ee.jpg" alt="Profile Picture">
+                <h2>Vynaa AI</h2>
+            </div>
+            <button onclick="resetChat()">Reset Chat</button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <!-- Chat messages will appear here -->
+        </div>
+        <div class="typing-indicator" id="typing-indicator">
+            Mengetik...
+        </div>
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Pesan" onkeydown="if(event.key === 'Enter') sendMessage()">
+            <button onclick="sendMessage()">➤</button>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
